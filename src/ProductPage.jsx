@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../services/productService";
 import { addToCart } from "../services/cartService";
+import { BASE_URL } from "../config";   // ✅ import here
 import "./style.css";
-
-const BASE_URL = 'http://localhost:9090/back1';
 
 const ProductPage = ({ category }) => {
   const [products, setProducts] = useState([]);
@@ -41,7 +40,7 @@ const ProductPage = ({ category }) => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={${BASE_URL}/api/products/images/${product.imagePath}}
+                src={`${BASE_URL}/images/${product.imagePath}`}   // ✅ use BASE_URL
                 alt={product.name}
               />
               <h3>{product.name}</h3>

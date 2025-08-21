@@ -4,7 +4,7 @@ import { getProducts } from "../services/productService";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
-const BASE_URL = 'http://localhost:9090/back1';
+const BASE_URL = 'http://localhost:5000';
 
 const Laptops = () => {
   const [products, setProducts] = useState([]);
@@ -32,7 +32,7 @@ const Laptops = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={${BASE_URL}/api/products/images/${product.imagePath}}
+                src={`${BASE_URL}/api/products/images/${Laptops.jpeg}`}
                 alt={product.name}
               />
               <h4>{product.name}</h4>
