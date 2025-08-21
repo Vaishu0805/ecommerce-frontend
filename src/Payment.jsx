@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./style.css";
 
 
-import { useCart } from "../Context/CartContext";
+import { useCart } from "./Context/CartContext";
 
 
 const Payment = () => {
