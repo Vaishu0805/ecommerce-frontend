@@ -3,6 +3,7 @@ import { getProducts } from "../services/productService";
 import { addToCart } from "../services/cartService";
 import { BASE_URL } from "../config";   // ✅ import here
 import "./style.css";
+const BASE_URL = import.meta.env.VITE_BASE_URL || "http://localhost:5000";
 
 const ProductPage = ({ category }) => {
   const [products, setProducts] = useState([]);
