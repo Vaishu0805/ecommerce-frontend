@@ -32,4 +32,6 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default function Signup() {
+  return <h2>Signup Page</h2>;
+}
