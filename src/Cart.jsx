@@ -2,7 +2,13 @@ import React from "react";
 import { useCart } from "./context/CartContext";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
-
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </React.StrictMode>
+);
 const BASE_URL = 'http://localhost:5000';
 
 const Cart = () => {
