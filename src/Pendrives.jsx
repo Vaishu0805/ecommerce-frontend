@@ -32,7 +32,7 @@ const Pendrives = () => {
           products.map((product) => (
             <div key={product.id} className="product-card">
               <img
-                src={${BASE_URL}/api/products/images/${product.imagePath}}
+                src={`${BASE_URL}/api/products/images/${product.imagePath}`}
                 alt={product.name}
               />
               <h4>{product.name}</h4>
